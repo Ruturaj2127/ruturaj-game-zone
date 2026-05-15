@@ -1,0 +1,495 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww35640\viewh22400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+  <title>RUTURAJ GAME ZONE</title>\
+\
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">\
+\
+  <style>\
+\
+    *\{\
+      margin:0;\
+      padding:0;\
+      box-sizing:border-box;\
+      scroll-behavior:smooth;\
+    \}\
+\
+    body\{\
+      background:#050816;\
+      color:white;\
+      font-family:'Poppins',sans-serif;\
+      overflow-x:hidden;\
+    \}\
+\
+    :root\{\
+      --neon:#00f7ff;\
+      --purple:#7d2cff;\
+      --dark:#08101f;\
+      --pink:#ff0088;\
+    \}\
+\
+    header\{\
+      position:fixed;\
+      top:0;\
+      left:0;\
+      width:100%;\
+      display:flex;\
+      justify-content:space-between;\
+      align-items:center;\
+      padding:20px 8%;\
+      background:rgba(0,0,0,0.7);\
+      backdrop-filter:blur(12px);\
+      z-index:1000;\
+      border-bottom:1px solid rgba(255,255,255,0.1);\
+    \}\
+\
+    .logo\{\
+      font-family:'Orbitron',sans-serif;\
+      font-size:2rem;\
+      font-weight:800;\
+      color:var(--neon);\
+      text-shadow:0 0 15px rgba(0,247,255,0.8);\
+      letter-spacing:2px;\
+    \}\
+\
+    nav a\{\
+      color:white;\
+      text-decoration:none;\
+      margin-left:25px;\
+      transition:0.3s;\
+      font-weight:500;\
+    \}\
+\
+    nav a:hover\{\
+      color:var(--neon);\
+    \}\
+\
+    .hero\{\
+      min-height:100vh;\
+      display:flex;\
+      justify-content:space-between;\
+      align-items:center;\
+      padding:120px 8%;\
+      position:relative;\
+      overflow:hidden;\
+      background:linear-gradient(135deg,#020412,#091833,#020412);\
+    \}\
+\
+    .hero::before\{\
+      content:'';\
+      position:absolute;\
+      width:450px;\
+      height:450px;\
+      background:rgba(0,247,255,0.15);\
+      filter:blur(150px);\
+      border-radius:50%;\
+      top:-100px;\
+      left:-100px;\
+    \}\
+\
+    .hero-content\{\
+      max-width:600px;\
+      z-index:2;\
+    \}\
+\
+    .hero-content h1\{\
+      font-size:4.5rem;\
+      font-family:'Orbitron',sans-serif;\
+      line-height:1.1;\
+      margin-bottom:20px;\
+    \}\
+\
+    .hero-content h1 span\{\
+      color:var(--neon);\
+    \}\
+\
+    .hero-content p\{\
+      color:#cfd8ff;\
+      line-height:1.8;\
+      margin-bottom:30px;\
+    \}\
+\
+    .btn\{\
+      padding:15px 35px;\
+      border:none;\
+      border-radius:50px;\
+      background:linear-gradient(45deg,var(--neon),var(--purple));\
+      color:white;\
+      font-weight:700;\
+      cursor:pointer;\
+      transition:0.4s;\
+      box-shadow:0 0 20px rgba(0,247,255,0.5);\
+    \}\
+\
+    .btn:hover\{\
+      transform:translateY(-5px) scale(1.05);\
+    \}\
+\
+    .hero-image img\{\
+      width:520px;\
+      max-width:100%;\
+      animation:float 4s ease-in-out infinite;\
+      filter:drop-shadow(0 0 35px rgba(0,247,255,0.4));\
+      z-index:2;\
+      position:relative;\
+    \}\
+\
+    @keyframes float\{\
+      0%,100%\{transform:translateY(0)\}\
+      50%\{transform:translateY(-18px)\}\
+    \}\
+\
+    section\{\
+      padding:90px 8%;\
+    \}\
+\
+    .section-title\{\
+      text-align:center;\
+      font-size:3rem;\
+      margin-bottom:60px;\
+      font-family:'Orbitron',sans-serif;\
+      color:var(--neon);\
+    \}\
+\
+    .games\{\
+      display:grid;\
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));\
+      gap:30px;\
+    \}\
+\
+    .card\{\
+      background:linear-gradient(145deg,#0d1528,#111b35);\
+      border-radius:25px;\
+      overflow:hidden;\
+      transition:0.4s;\
+      border:1px solid rgba(255,255,255,0.08);\
+      position:relative;\
+    \}\
+\
+    .card:hover\{\
+      transform:translateY(-12px);\
+      box-shadow:0 20px 40px rgba(0,247,255,0.2);\
+    \}\
+\
+    .card img\{\
+      width:100%;\
+      height:220px;\
+      object-fit:cover;\
+    \}\
+\
+    .card-content\{\
+      padding:25px;\
+    \}\
+\
+    .card-content h2\{\
+      color:var(--neon);\
+      margin-bottom:12px;\
+    \}\
+\
+    .card-content p\{\
+      color:#d5d5d5;\
+      line-height:1.6;\
+    \}\
+\
+    .stats\{\
+      display:grid;\
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));\
+      gap:25px;\
+      text-align:center;\
+    \}\
+\
+    .stat-box\{\
+      padding:40px 20px;\
+      background:linear-gradient(145deg,#09111f,#111f39);\
+      border-radius:25px;\
+      border:1px solid rgba(255,255,255,0.08);\
+    \}\
+\
+    .stat-box h1\{\
+      font-size:3rem;\
+      color:var(--neon);\
+      margin-bottom:10px;\
+    \}\
+\
+    .arena\{\
+      background:linear-gradient(135deg,#08101f,#020412);\
+      border-radius:35px;\
+      text-align:center;\
+      padding:70px 25px;\
+      position:relative;\
+      overflow:hidden;\
+    \}\
+\
+    .arena::before\{\
+      content:'';\
+      position:absolute;\
+      width:350px;\
+      height:350px;\
+      background:rgba(125,44,255,0.15);\
+      filter:blur(120px);\
+      border-radius:50%;\
+      top:-100px;\
+      right:-80px;\
+    \}\
+\
+    .progress-bar\{\
+      width:80%;\
+      height:28px;\
+      background:#111;\
+      border-radius:50px;\
+      margin:30px auto;\
+      overflow:hidden;\
+      border:2px solid var(--neon);\
+    \}\
+\
+    .progress\{\
+      height:100%;\
+      width:0;\
+      background:linear-gradient(90deg,var(--purple),var(--neon));\
+      transition:1s;\
+    \}\
+\
+    footer\{\
+      text-align:center;\
+      padding:30px;\
+      background:black;\
+      color:#aaa;\
+      border-top:1px solid rgba(255,255,255,0.1);\
+    \}\
+\
+    @media(max-width:900px)\{\
+\
+      .hero\{\
+        flex-direction:column;\
+        text-align:center;\
+      \}\
+\
+      .hero-content h1\{\
+        font-size:3rem;\
+      \}\
+\
+      nav\{\
+        display:none;\
+      \}\
+\
+      .hero-image img\{\
+        margin-top:40px;\
+      \}\
+\
+    \}\
+\
+  </style>\
+</head>\
+<body>\
+\
+<header>\
+  <div class="logo">RUTURAJ GAME ZONE</div>\
+\
+  <nav>\
+    <a href="#games">Games</a>\
+    <a href="#stats">Stats</a>\
+    <a href="#arena">Arena</a>\
+  </nav>\
+</header>\
+\
+<section class="hero">\
+\
+  <div class="hero-content">\
+\
+    <h1>ENTER THE <span>ULTIMATE</span> GAMING WORLD</h1>\
+\
+    <p>\
+      Welcome to RUTURAJ GAME ZONE \'97 a futuristic gaming universe packed with action, esports vibes, glowing neon visuals, and powerful gaming energy.\
+    </p>\
+\
+    <button class="btn" onclick="startGaming()">Start Gaming</button>\
+\
+  </div>\
+\
+  <div class="hero-image">\
+    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop" alt="Gaming">\
+  </div>\
+\
+</section>\
+\
+<section id="games">\
+\
+  <h2 class="section-title">Top Games</h2>\
+\
+  <div class="games">\
+\
+    <div class="card">\
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">\
+      <div class="card-content">\
+        <h2>Battle Arena</h2>\
+        <p>Fight intense multiplayer battles and become the arena champion.</p>\
+      </div>\
+    </div>\
+\
+    <div class="card">\
+      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop">\
+      <div class="card-content">\
+        <h2>Racing Storm</h2>\
+        <p>High-speed racing experience with futuristic tracks and challenges.</p>\
+      </div>\
+    </div>\
+\
+    <div class="card">\
+      <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">\
+      <div class="card-content">\
+        <h2>Cyber Shooter</h2>\
+        <p>Play thrilling FPS missions with next-generation action gameplay.</p>\
+      </div>\
+    </div>\
+\
+  </div>\
+\
+</section>\
+\
+<section id="stats">\
+\
+  <h2 class="section-title">Gaming Stats</h2>\
+\
+  <div class="stats">\
+\
+    <div class="stat-box">\
+      <h1 class="counter" data-target="5000">0</h1>\
+      <p>Gamers Joined</p>\
+    </div>\
+\
+    <div class="stat-box">\
+      <h1 class="counter" data-target="150">0</h1>\
+      <p>Gaming Tournaments</p>\
+    </div>\
+\
+    <div class="stat-box">\
+      <h1 class="counter" data-target="99">0</h1>\
+      <p>Winning Rate</p>\
+    </div>\
+\
+    <div class="stat-box">\
+      <h1 class="counter" data-target="24">0</h1>\
+      <p>Hours Gaming Fun</p>\
+    </div>\
+\
+  </div>\
+\
+</section>\
+\
+<section id="arena">\
+\
+  <div class="arena">\
+\
+    <h2 class="section-title">Power Loading</h2>\
+\
+    <p>Charge gaming energy to unlock the ultimate battle arena.</p>\
+\
+    <div class="progress-bar">\
+      <div class="progress" id="progress"></div>\
+    </div>\
+\
+    <button class="btn" onclick="loadPower()">Load Power</button>\
+\
+  </div>\
+\
+</section>\
+\
+<footer>\
+  <p>\'a9 2026 RUTURAJ GAME ZONE | Designed with HTML CSS JavaScript</p>\
+</footer>\
+\
+<script>\
+\
+function startGaming()\{\
+  alert('\uc0\u55356 \u57262  Welcome To RUTURAJ GAME ZONE! Ready To Play?');\
+\}\
+\
+function loadPower()\{\
+\
+  let progress = document.getElementById('progress');\
+\
+  let width = 0;\
+\
+  const interval = setInterval(()=>\{\
+\
+    if(width >= 100)\{\
+      clearInterval(interval);\
+      alert('\uc0\u9889  Ultimate Gaming Power Activated!');\
+    \}\
+\
+    else\{\
+      width++;\
+      progress.style.width = width + '%';\
+    \}\
+\
+  \},20)\
+\
+\}\
+\
+// Counter Animation\
+\
+const counters = document.querySelectorAll('.counter');\
+\
+counters.forEach(counter=>\{\
+\
+  const updateCounter = ()=>\{\
+\
+    const target = +counter.getAttribute('data-target');\
+    const current = +counter.innerText;\
+\
+    const increment = target / 100;\
+\
+    if(current < target)\{\
+      counter.innerText = `$\{Math.ceil(current + increment)\}`;\
+      setTimeout(updateCounter,20);\
+    \}\
+\
+    else\{\
+      counter.innerText = target;\
+    \}\
+\
+  \}\
+\
+  updateCounter();\
+\
+\})\
+\
+// Scroll Reveal\
+\
+const cards = document.querySelectorAll('.card');\
+\
+window.addEventListener('scroll',()=>\{\
+\
+  cards.forEach(card=>\{\
+\
+    const top = card.getBoundingClientRect().top;\
+\
+    if(top < window.innerHeight - 50)\{\
+      card.style.opacity='1';\
+      card.style.transform='translateY(0)';\
+    \}\
+\
+  \})\
+\
+\})\
+\
+cards.forEach(card=>\{\
+  card.style.opacity='0';\
+  card.style.transform='translateY(60px)';\
+  card.style.transition='0.6s ease';\
+\})\
+\
+</script>\
+\
+</body>\
+</html>\
+}
